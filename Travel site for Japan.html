@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore Japan</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ff4d6d;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url("https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    color:white;
+    max-width:900px;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:70px;
+    margin-bottom:20px;
+    text-shadow:3px 3px 15px rgba(0,0,0,0.6);
+}
+
+.hero-content p{
+    font-size:22px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.primary{
+    background:#e63946;
+    color:white;
+}
+
+.primary:hover{
+    background:#c1121f;
+}
+
+.secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.secondary:hover{
+    background:white;
+    color:black;
+}
+
+/* ABOUT */
+
+.about{
+    padding:90px 10%;
+    background:#f8f8f8;
+}
+
+.about h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:30px;
+    color:#222;
+}
+
+.about p{
+    text-align:center;
+    max-width:1000px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+    color:#555;
+}
+
+/* CARDS */
+
+.features{
+    padding:80px 10%;
+}
+
+.features h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#e63946;
+}
+
+/* DESTINATIONS */
+
+.destinations{
+    padding:80px 10%;
+    background:#f5f5f5;
+}
+
+.destinations h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:white;
+}
+
+.footer-container{
+    padding:60px 10%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+
+.footer-section h3{
+    margin-bottom:20px;
+    color:#ff4d6d;
+}
+
+.footer-section p,
+.footer-section li{
+    color:#d1d5db;
+    line-height:1.8;
+}
+
+.footer-section ul{
+    list-style:none;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    color:#aaa;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:40px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:15px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <div class="logo">🇯🇵 Explore Japan</div>
+
+    <ul>
+        <li><a href="D:\OneDrive\OneDrive - MAPS College\Desktop\Travel site for Japan.html">Home</a></li>
+        <li><a href="D:\OneDrive\OneDrive - MAPS College\Desktop\Destinations.html">Destinations</a></li>
+        <li><a href="D:\OneDrive\OneDrive - MAPS College\Desktop\gallery.html">Gallery</a></li>
+        <li><a href="D:\OneDrive\OneDrive - MAPS College\Desktop\contact.html">Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Journey Through Japan</h1>
+
+        <p>
+            Discover breathtaking cherry blossoms, historic temples,
+            modern cities, delicious cuisine and unforgettable adventures
+            across the Land of the Rising Sun.
+        </p>
+
+        <div class="buttons">
+            <a href="#" class="btn primary">Explore Japan</a>
+            <a href="#" class="btn secondary">Travel Guide</a>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <h2>About Japan</h2>
+
+    <p>
+        Japan combines ancient traditions with futuristic innovation.
+        From the peaceful temples of Kyoto and the iconic Mount Fuji
+        to the busy streets of Tokyo, Japan offers a unique experience
+        for every traveler.
+    </p>
+</section>
+
+<section class="features">
+    <h2>Why Visit Japan?</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>🌸 Cherry Blossoms</h3>
+            <p>Experience Japan's world-famous Sakura season.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏯 Historic Culture</h3>
+            <p>Visit beautiful temples, shrines and castles.</p>
+        </div>
+
+        <div class="card">
+            <h3>🍣 Amazing Food</h3>
+            <p>Enjoy authentic sushi, ramen and Japanese cuisine.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="destinations">
+    <h2>Popular Destinations</h2>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80" alt="Tokyo">
+
+        <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=800&q=80" alt="Kyoto">
+
+        <img src="https://images.unsplash.com/photo-1570459027562-4a916cc6113f?auto=format&fit=crop&w=800&q=80" alt="Mount Fuji">
+    </div>
+</section>
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-section">
+<h3>About Explore Japan</h3>
+<p>
+Explore Japan provides travel information about Japan's cities,
+culture, food, festivals, and historical landmarks to help
+tourists plan memorable journeys.
+</p>
+</div>
+
+<div class="footer-section">
+<h3>Top Destinations</h3>
+<ul>
+<li>Tokyo</li>
+<li>Kyoto</li>
+<li>Osaka</li>
+<li>Mount Fuji</li>
+<li>Hokkaido</li>
+</ul>
+</div>
+
+<div class="footer-section">
+<h3>Travel Information</h3>
+<p>Best Time: March - May</p>
+<p>Currency: Japanese Yen (JPY)</p>
+<p>Language: Japanese</p>
+<p>Capital: Tokyo</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 Explore Japan | All Rights Reserved</p>
+</div>
+
+</footer>
+
+</body>
+</html>

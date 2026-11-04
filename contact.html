@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Explore Japan</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* NAVBAR */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,.85);
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+nav ul li a:hover{
+    color:#ff4d6d;
+}
+
+/* HERO */
+
+.hero{
+    height:60vh;
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+/* CONTACT */
+
+.contact-section{
+    padding:80px 10%;
+}
+
+.contact-section h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.contact-info h3{
+    color:#e63946;
+    margin-bottom:15px;
+}
+
+.contact-info p{
+    margin-bottom:15px;
+    line-height:1.8;
+}
+
+form{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    background:#e63946;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#c1121f;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:white;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    padding:50px 10%;
+}
+
+.footer-section h3{
+    color:#ff4d6d;
+    margin-bottom:15px;
+}
+
+.footer-section p,
+.footer-section li{
+    color:#d1d5db;
+    line-height:1.8;
+}
+
+.footer-section ul{
+    list-style:none;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    text-align:center;
+    padding:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:40px;
+}
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:15px;
+}
+
+.contact-container{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+
+<div class="logo">🇯🇵 Explore Japan</div>
+
+<ul>
+<li><a href="D:\OneDrive\OneDrive - MAPS College\Desktop\Travel site for Japan.html">Home</a></li>
+<li><a href="D:\OneDrive\OneDrive - MAPS College\Desktop\Destinations.html">Destinations</a></li>
+<li><a href="D:\OneDrive\OneDrive - MAPS College\Desktop\gallery.html">Gallery</a></li>
+<li><a href="D:\OneDrive\OneDrive - MAPS College\Desktop\contact.html">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+<section class="hero">
+    <h1>Contact Us</h1>
+</section>
+
+<section class="contact-section">
+
+<h2>Get In Touch</h2>
+
+<div class="contact-container">
+
+<div class="contact-info">
+
+<h3>Travel Information</h3>
+
+<p><strong>Email:</strong> info@explorejapan.com</p>
+
+<p><strong>Phone:</strong> +81 123 456 789</p>
+
+<p><strong>Address:</strong> Tokyo, Japan</p>
+
+<p>
+Need help planning your trip to Japan?
+Contact us and we'll help you discover the best destinations,
+travel tips, attractions, and experiences.
+</p>
+
+</div>
+
+<form>
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number">
+
+<textarea rows="6" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-section">
+<h3>About Explore Japan</h3>
+<p>
+Explore Japan helps travelers discover Japan's culture,
+food, technology, history and beautiful destinations.
+</p>
+</div>
+
+<div class="footer-section">
+<h3>Quick Links</h3>
+<ul>
+<li>Home</li>
+<li>Destinations</li>
+<li>Gallery</li>
+<li>Contact</li>
+</ul>
+</div>
+
+<div class="footer-section">
+<h3>Travel Information</h3>
+<p>Capital: Tokyo</p>
+<p>Currency: Japanese Yen</p>
+<p>Language: Japanese</p>
+<p>Best Time: Spring & Autumn</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 Explore Japan | All Rights Reserved</p>
+</div>
+
+</footer>
+
+</body>
+</html>
